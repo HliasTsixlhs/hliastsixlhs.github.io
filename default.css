@@ -12,7 +12,7 @@
 	--previewBg:rgb(251, 249, 243, 0.8);
 	--previewShadow:#f0ead6;
 
-
+	--greetingTitleColor:none;
 	--buttonColor:black;
 };
 
@@ -74,6 +74,12 @@ h6 { font-size: 16px;}
 	text-align: center;
 	align-content: center;
 	min-height: 10em;
+	
+}
+
+.greeting-wrapper h1{
+
+	-webkit-text-stroke: 2px var(--greetingTitleColor);
 }
 
 .intro-wrapper{
@@ -98,6 +104,50 @@ h6 { font-size: 16px;}
 		"left-column right-column";
 }
 
+.intro-wrapper1{
+	background-color: var(--secondaryColor);
+	border:1px solid var(--borderColor);
+	border-radius:5px 5px 0 0;
+
+	background-image:url(images/genetics.jpeg);
+	background-repeat: no-repeat;
+	background-attachment: scroll;
+	background-size: cover;
+	opacity: 1;
+
+	-webkit-box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
+	-moz-box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
+	box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
+
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-areas: 
+		"nav-wrapper nav-wrapper"
+		"left-column right-column";
+}
+
+
+.intro-wrapper2{
+	background-color: var(--secondaryColor);
+	border:2px solid var(--borderColor);
+	border-radius:5px 5px 0 0;
+
+	background-image:url(images/vgg16_architecture.jpeg);
+	background-repeat: no-repeat;
+	background-attachment: scroll;
+	background-size: cover;
+	opacity: 1;
+
+	-webkit-box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
+	-moz-box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
+	box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
+
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-areas: 
+		"nav-wrapper nav-wrapper"
+		"left-column right-column";
+}
 
 .nav-wrapper{
 	border-radius:5px 5px 0 0;
@@ -114,8 +164,30 @@ h6 { font-size: 16px;}
 	padding: 10px;
 }
 
-#navigation a{
+#navigation {
 	color: var(--mainText);
+}
+
+#contact-mail:visited {
+  color: pink;
+  background-color: transparent;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 130%;
+}
+#contact-mail:hover {
+  color: red;
+  background-color: transparent;
+  text-decoration: underline;
+  font-weight: bold;
+  font-size: 130%;
+}
+#contact-mail:active {
+  color: gray;
+  background-color: transparent;
+  text-decoration: underline;
+  font-weight: bold;
+  font-size: 130%;
 }
 
 #navigation li{
@@ -168,6 +240,20 @@ h6 { font-size: 16px;}
 	width: 250px;
 	object-fit: cover;
 	border: 2px solid var(--borderColor);
+}
+
+#profile_pic:hover
+{
+    
+    z-index: 2;
+    -webkit-transition: all 250ms ease-in;
+    -webkit-transform: scale(1.5);
+    -ms-transition: all 250ms ease-in;
+    -ms-transform: scale(1.5);   
+    -moz-transition: all 250ms ease-in;
+    -moz-transform: scale(1.5);
+    transition: all 250ms ease-in;
+    transform: scale(1.5);
 }
 
 #theme-options-wrapper{
@@ -230,10 +316,21 @@ h6 { font-size: 16px;}
 #preview-shadow{
 	background-color: var(--previewShadow);
 	width: 300px;
-	height: 180px;
+	height: 230px ;
 	padding-left: 30px;
-	padding-top: 30px; 
+	padding-top: 30px;
+
 }
+
+#preview-shadow1{
+	background-color: var(--previewShadow);
+	width: 300px;
+	height: 340px ;
+	padding-left: 30px;
+	padding-top: 30px;
+
+}
+
 
 #preview{
 	width: 300px;
@@ -311,6 +408,21 @@ h6 { font-size: 16px;}
 	box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);		
 }
 
+.post img:hover
+{
+	border: 5px solid black;
+    box-shadow: 0px 0px 150px #000000;
+    z-index: 2;
+    -webkit-transition: all 400ms ease-in;
+    -webkit-transform: scale(1.5);
+    -ms-transition: all 400ms ease-in;
+    -ms-transform: scale(1.5);   
+    -moz-transition: all 400ms ease-in;
+    -moz-transform: scale(1.5);
+    transition: all 400ms ease-in;
+    transform: scale(1.5);
+}
+
 .thumbnail{
 	display: block;
 	width: 100%;
@@ -369,10 +481,33 @@ h6 { font-size: 16px;}
 	padding-top: 10px;
 	padding-bottom: 10px;
 	color: #fff;
-	background-color: var(--buttonColor)
-	border:none; 
+
+	/*text-shadow: -1px 0 #fff, 0 1px #fff, 1px 0 #fff, 0 -1px #fff;*/
+	background-color: var(--buttonColor);
+	/*border:none;*/ 
 }
 
+#submit-btn:hover{
+	transition:1000ms;
+	background-color: black;
+}
+
+#submit-btn1{
+	margin-top: 10px;
+	width: 100%;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	color: #fff;
+
+	/*text-shadow: -1px 0 #fff, 0 1px #fff, 1px 0 #fff, 0 -1px #fff;*/
+	background-color: var(--buttonColor);
+	/*border:none;*/ 
+}
+
+#submit-btn1:hover{
+	transition:1000ms;
+	background-color: black;
+}
 
 
 @media screen and (max-width: 1200px){

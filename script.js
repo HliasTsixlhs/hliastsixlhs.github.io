@@ -20,19 +20,27 @@ for (var i=0; themeDots.length > i; i++){
 
 function setTheme(mode){
 	if(mode == 'light'){
-		document.getElementById('theme-style').href = 'default.css'  
+		document.getElementById('theme-style').href = 'default.css'
+	/*	document.getElementById('submit-btn').style.color = 'black'
+		document.getElementById('submit-btn').style.textShadow = 'none'*/
 	}
 
 	if(mode == 'blue'){
-		document.getElementById('theme-style').href = 'blue.css'  
+		document.getElementById('theme-style').href = 'blue.css' 
+	/*	document.getElementById('submit-btn').style.color = '#fff'
+		document.getElementById('submit-btn').style.textShadow = 'none'*/	
 	}
 
 	if(mode == 'green'){
-		document.getElementById('theme-style').href = 'green.css'  
+		document.getElementById('theme-style').href = 'green.css'
+	/*	document.getElementById('submit-btn').style.color = '#fff'
+		document.getElementById('submit-btn').style.textShadow = 'none'*/
 	}
 
 	if(mode == 'purple'){
-		document.getElementById('theme-style').href = 'purple.css'  
+		document.getElementById('theme-style').href = 'purple.css'
+	/*	document.getElementById('submit-btn').style.color = '#fff'
+		document.getElementById('submit-btn').style.textShadow = 'none'*/
 	}		
 
 	localStorage.setItem('theme', mode) 

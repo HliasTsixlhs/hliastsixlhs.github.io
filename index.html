@@ -35,13 +35,16 @@
 				</div>
 				
 				<ul id="navigation">
-					<li><a href="#">Contact</a></li>
+						<address>
+							Email: <a id="contact-mail" href="mailto:hliastsixlhs@gmail.com">hliastsixlis@gmail.com</a>.<br> 
+							Visit me at: Ionon 32, Athens.
+						</address>
 				</ul>
 			</div>
 
 
 			<div class="left-column">
-				<img id="profile_pic" src="images/Facebook_image_profile.jpg">
+				<img id="profile_pic" src="images/linked_image_profile.jpg">
 
 				
 				<h5 style="text-align: center; line-height: 0;">Custom Theme here</h5>
@@ -66,8 +69,7 @@
 						<div id="corner-tl" class="corner"></div>
 						<div id="corner-tr" class="corner"></div>
 						<h3>What I Do</h3>
-						<p>I was a lead developer in a past life,
-						now i enjoy teaching courses.</p>
+						<p>Just finished my Thesis as an Electrical and Computer Engineering at Technical University of Crete. Now i am looking to work as Junior Software Developer.</p>
 						<div id="corner-bl" class="corner"></div>
 						<div id="corner-br" class="corner"></div>
 					</div>
@@ -84,7 +86,9 @@
 				<div class="about-me">
 					<h4>More about me</h4>
 
-					<p>I build new project just to tickle my brain and love  teaching others how they're made.</p>
+					<p>Passionate about new technology and solving real-time problems. I build new projects just to tickle my brain and i like to learn something new everyday.</p>
+
+					<p>Now i am looking to work as a Junior Software Developer in one of the following fields: Data Science, Web Development or Mobile-iOS Development.</p>
 
 					<p>While I keep  busy teaching courses, I still take interviews in search of a great team & projects that interest me.</p>
 				
@@ -92,24 +96,24 @@
 					<hr>
 
 					<h4>TOP EXPERTISE</h4>
-
-					<p>Fullstack developer with primary focus on Django + React: <a target="_blank" href="Resume_old.pdf">Download Resume.</a></p>
+					<!--  with primary focus on -->
+					<p>Electrical and Computer Engineering/Technical University of Crete: <a target="_blank" href="Resume_old.pdf">Download Resume.</a></p>
 
 					<div id="skills">
 						<ul>
 							<li>Python</li>
-							<li>Django</li>
 							<li>JavaScript</li>
-							<li>React</li>
-							<li>Postgres</li>
+							<li>C</li>
+							<li>Java</li>
+							<li>C#</li>
+							<li>MATLAB</li>
 						</ul>
 
 						<ul>
-							<li>Google Map API</li>
-							<li>JS Charts</li>
-							<li>AWS (RDS/S3)</li>
-							<li>Heroku</li>
 							<li>HTML/CSS</li>
+							<li>Google Map APIs</li>
+							<li>Deep Learning</li>
+							<li>Genetic algorithms</li>
 						</ul>
 
 					</div>
@@ -143,7 +147,7 @@
 						<img class="thumbnail" src="images/heatmaps_TP_wind.jpg">
 						<div class="post-preview">
 							<h6 class="post-title">Deep Learning Techniques for Multispectral Image Analysis (My Thesis).</h6>
-							<p class="post-intro">This is a sentence. Some more text</p>
+							<p class="post-intro">Tools: Python, tensorflow-gpu, Keras, Google Map API.</p>
 							<a href="post_for_my_thesis.html">Read More...</a>
 						</div>
 					</div>
@@ -154,19 +158,20 @@
 						<img class="thumbnail" src="images/Cascoded_OTA.jpg">
 						<div class="post-preview">
 							<h6 class="post-title">Genetic algorithm to predict parameters for Simple and Cascoded OTAs.</h6>
-							<p class="post-intro">This is a sentence. Some more text</p>
-							<a href="#">Read More...</a>
+							<p class="post-intro">Tools: C, Java, Genetic algorithm, Analog design</p>
+							<a href="post_for_genetic_algorithms.html">Read More...</a>
 						</div>
 					</div>
 				</div>
 
 				<div>
 					<div class="post">
-						<img class="thumbnail" src="images/Facebook_image_profile.jpg">
+						<img class="thumbnail" src="images/future_loading.jpg">
 						<div class="post-preview">
-							<h6 class="post-title">Post Title</h6>
-							<p class="post-intro">This is a sentence. Some more text</p>
-							<a href="#">Read More...</a>
+							<h6 class="post-title">Coming soon...</h6>
+							<p class="post-intro">
+Hoping to work with you to create new ones!!</p>
+							<!--<a href="#">Read More...</a>-->
 						</div>
 					</div>
 				</div>
@@ -180,7 +185,7 @@
 		<div class="main-container">
 			<h3 style="text-align: center;">Get in Touch</h3>
 		
-			<form id="contact-form">
+			<form id="contact-form" action="mailto:hliastsixlis@gmail.com?subject=Subject" method="post" enctype="text/plain">
 				<label>Name</label>
 				<input class="input-field" type="text" name="name">
 
@@ -193,6 +198,7 @@
 				<label>Message</label>
 				<textarea class="input-field" name="message"> </textarea> 												
 				<input id="submit-btn" type="submit" value="Send">
+				<input id="submit-btn1" type="reset" value="Reset">
 				
 			</form>
 		</div>
