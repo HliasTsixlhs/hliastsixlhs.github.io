@@ -245,9 +245,9 @@ h6 { font-size: 16px;}
 	width: 250px;
 	object-fit: cover;
 	border: 3px solid var(--borderColor);
-}
+/*}
 
-#myImg {
+#myImg {*/
   border-radius: 5px;
   cursor: pointer;
   transition: 0.4s;
