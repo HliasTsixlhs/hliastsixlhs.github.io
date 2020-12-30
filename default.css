@@ -556,6 +556,15 @@ h6 { font-size: 16px;}
 	font-size: 16px; 
 }
 
+#posts-theme-thesis{
+  width: 96%;
+  height: 400px;
+  background-image: url('images/vgg16_architecture.jpeg');
+  background-color: var(--secondaryColor);
+  background-size: 100% 100%;
+  border: 10px solid var(--borderColor);
+}
+
 #contact-form{
 	display: block;
 	max-width: 600px;
@@ -651,3 +660,39 @@ h6 { font-size: 16px;}
 
 }
 
+/* -------------------------------------------------------- */
+
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+  border: 5px solid var(--borderColor);
+}
+
+.fa:hover {
+    opacity: 0.5;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-github {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-google {
+  background: #dd4b39;
+  color: white;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
