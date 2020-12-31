@@ -557,9 +557,18 @@ h6 { font-size: 16px;}
 }
 
 #posts-theme-thesis{
+  width: 80%;
+  height: 340px;
+  background-image: url('images/Osm_post_theme.png');
+  background-color: var(--secondaryColor);
+  background-size: 100% 100%;
+  border: 10px solid var(--borderColor);
+}
+
+#posts-theme-genetic{
   width: 96%;
   height: 400px;
-  background-image: url('images/vgg16_architecture.jpeg');
+  background-image: url('images/genetics.jpeg');
   background-color: var(--secondaryColor);
   background-size: 100% 100%;
   border: 10px solid var(--borderColor);
