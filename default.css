@@ -12,7 +12,7 @@
 	--previewBg:rgb(251, 249, 243, 0.8);
 	--previewShadow:#f0ead6;
 
-	--greetingTitleColor:none;
+	--greetingTitleColor:gray;
 	--buttonColor:black;
 };
 
