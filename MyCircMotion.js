@@ -19,17 +19,16 @@ const canvas = document.querySelector('canvas')
 const c = canvas.getContext('2d')
   // canvas.width=document.getElementsByClassName('intro-wrapper').getBoundingClientRect().width 
   // canvas.height=document.getElementsByClassName('intro-wrapper').getBoundingClientRect().height
- // canvas.width = document.getElementsByClassName('greeting-wrapper').offsetWidth;
- // canvas.height = document.getElementsByClassName('greeting-wrapper').offsetHeight;
-canvas.width = innerWidth-30
-// canvas.height = innerHeight
-canvas.height = 160
-   // canvas.width=document.getElementsByClassName('greeting-wrapper').getBoundingClientRect().width 
-    canvas.height=document.getElementsByClassName('greeting-wrapper').offsetHeight
-    // canvas.height=160
-    let elem = document.querySelector('div').getBoundingClientRect();
-    
-    canvas.height= elem.height;
+  // canvas.width = innerWidth
+  // canvas.height = innerHeight
+  // canvas.width=document.getElementsByClassName('greeting-wrapper').getBoundingClientRect().width 
+  // canvas.height=document.getElementsByClassName('greeting-wrapper').offsetHeight
+
+    let elem1 = document.querySelector('div').getBoundingClientRect();
+    canvas.height= elem1.height;
+    let elem2 =  document.querySelector('section').getBoundingClientRect();
+    canvas.width = elem2.width;
+
 const mouse = {
   x: innerWidth / 2,
   y: innerHeight / 2
@@ -45,12 +44,15 @@ addEventListener('mousemove', (event) => {
 })
 
 addEventListener('resize', () => {
-   canvas.width = innerWidth-30
+   // canvas.width = innerWidth
   // canvas.height = innerHeight
-    // canvas.height=160
-        let elem = document.querySelector('div').getBoundingClientRect();
-    
-    canvas.height= elem.height;
+
+    let elem1 = document.querySelector('div').getBoundingClientRect();
+    canvas.height= elem1.height;
+    let elem2 =  document.querySelector('section').getBoundingClientRect();
+    canvas.width = elem2.width;
+
+
 
   init()
 })
