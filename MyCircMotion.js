@@ -25,7 +25,11 @@ canvas.width = innerWidth-30
 // canvas.height = innerHeight
 canvas.height = 160
    // canvas.width=document.getElementsByClassName('greeting-wrapper').getBoundingClientRect().width 
-   // canvas.height=document.getElementsByClassName('greeting-wrapper').getBoundingClientRect().height
+    canvas.height=document.getElementsByClassName('greeting-wrapper').offsetHeight
+    // canvas.height=160
+    let elem = document.querySelector('div').getBoundingClientRect();
+    
+    canvas.height= elem.height;
 const mouse = {
   x: innerWidth / 2,
   y: innerHeight / 2
@@ -43,6 +47,10 @@ addEventListener('mousemove', (event) => {
 addEventListener('resize', () => {
    canvas.width = innerWidth-30
   // canvas.height = innerHeight
+    // canvas.height=160
+        let elem = document.querySelector('div').getBoundingClientRect();
+    
+    canvas.height= elem.height;
 
   init()
 })
