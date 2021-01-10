@@ -19,16 +19,20 @@ const canvas = document.querySelector('canvas')
 const c = canvas.getContext('2d')
   // canvas.width=document.getElementsByClassName('intro-wrapper').getBoundingClientRect().width 
   // canvas.height=document.getElementsByClassName('intro-wrapper').getBoundingClientRect().height
- // canvas.width = document.getElementsByClassName('intro-wrapper').offsetWidth;
- // canvas.height = document.getElementsByClassName('intro-wrapper').offsetHeight;
-canvas.width = innerWidth
-canvas.height = innerHeight
+ // canvas.width = document.getElementsByClassName('greeting-wrapper').offsetWidth;
+ // canvas.height = document.getElementsByClassName('greeting-wrapper').offsetHeight;
+canvas.width = innerWidth-30
+// canvas.height = innerHeight
+canvas.height = 160
+   // canvas.width=document.getElementsByClassName('greeting-wrapper').getBoundingClientRect().width 
+   // canvas.height=document.getElementsByClassName('greeting-wrapper').getBoundingClientRect().height
 const mouse = {
   x: innerWidth / 2,
   y: innerHeight / 2
 }
 
 const colors = ['#2185C5', '#7ECEFD', '#FFF6E5', '#FF7F66']
+
 
 // Event Listeners
 addEventListener('mousemove', (event) => {
@@ -37,8 +41,8 @@ addEventListener('mousemove', (event) => {
 })
 
 addEventListener('resize', () => {
-  canvas.width = innerWidth
-  canvas.height = innerHeight
+   canvas.width = innerWidth-30
+  // canvas.height = innerHeight
 
   init()
 })
@@ -53,9 +57,9 @@ class Particle {
     this.radius = radius
     this.color = color
     this.radians = Math.random() * Math.PI * 2;
-    this.velocity = 0.05;
-    this.distanceFromCenterx = randomIntFromRange(25,255)
-    this.distanceFromCentery = randomIntFromRange(25,255)
+    this.velocity = 0.03;
+    this.distanceFromCenterx = randomIntFromRange(25,75)
+    this.distanceFromCentery = randomIntFromRange(25,75)
   }
 
   draw(lastPoint) {
@@ -86,15 +90,41 @@ function init() {
   const radius = (Math.random() * 2) + 1; 
   particles = []
 
-  for (let i = 0; i < 55; i++) {
+  for (let i = 0; i < 125; i++) {
      particles.push(new Particle(canvas.width/2,canvas.height/2,radius,randomColor(colors)))
   }
 }
+// --mainColor:#eaeaea; white
+//   --mainColor:#15202B; blue
+//   --mainColor:#46344E;purple
+//   --mainColor:#606B56;green
 
+const backgroundColors = ['#eaeaea','#15202B','#606B56','#46344E']
 // Animation Loop
 function animate() {
   requestAnimationFrame(animate);
-   c.fillStyle = 'rgba(255, 255, 255, 0.05)';
+   // c.fillStyle = 'rgba(255, 255, 255, 0.05)';
+   
+  let theme = localStorage.getItem('theme')
+
+  if(theme == 'light'){
+    c.fillStyle = backgroundColors[0];
+    c.fillStyle = 'rgba(255, 255, 255, 0.05)';
+  }
+
+  if(theme == 'blue'){
+    c.fillStyle = backgroundColors[1];
+    c.fillStyle = 'rgba(21, 32, 43, 0.07)';
+  }
+
+  if(theme == 'green'){
+    c.fillStyle = backgroundColors[2];
+    c.fillStyle = 'rgba(96, 107, 86, 0.09)';
+  }
+
+  if(theme == 'purple'){
+    c.fillStyle = 'rgba(70, 52, 78, 0.09)';
+  } 
   //c.fillStyle = 'blue'; 
    c.fillRect(0, 0, canvas.width, canvas.height)
 
