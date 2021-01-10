@@ -51,6 +51,7 @@ addEventListener('resize', () => {
     canvas.height= elem1.height;
     let elem2 =  document.querySelector('section').getBoundingClientRect();
     canvas.width = elem2.width;
+    if(canvas.width < 300) canvas.width = elem1.width
 
 
 
